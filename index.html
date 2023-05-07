@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <div id="container">
+    <div id="title">
+        <h1>INSCRIVEZ  VOUS</h1>
+    </div>
+
+    <form>
+        <input type="text" id="pseudo" oninput="getEvent(event.target.value)" placeholder="Pseudo" name="pseudo">
+        <input type="email" id="email" placeholder="Email"  name="email">
+        <input type="password" id="password" placeholder="Password" name="password">
+        <select name="genre" id="genre">
+         <option disabled  value="placeholder">Selectionner votre genre</option>
+         <option value="homme">Homme</option>
+         <option value="femme">Femme</option>
+         <option value="not">Preferer de ne pas repondre</option>
+
+        </select>
+        <input type="button"  value="Envoyer" id="button">
+     </form>    
+     <div id="links">
+         <a href="#" id="forgot">Mot de passe oublie</a> 
+         <span id="trait">|</span>
+          <a href="#" id="login">Se connecter</a>
+ 
+     </div>
+   </div>
+
+   <script>
+
+    var email = document.getElementById("email");
+
+    email.addEventListener('input', function() {
+   console.log(email.value);
+    })
+   function getEvent(event){
+    console.log(event)
+    }
+   </script>
+    
+
+</body>
+</html>
